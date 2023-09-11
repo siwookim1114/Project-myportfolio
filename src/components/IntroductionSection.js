@@ -29,8 +29,8 @@ const IntroductionSection = () => {
         }
     ]
     const handleClick = (props) => () => {
-        const id = `${props}`;
-        console.log("asdf")
+        
+        
     }
     return(
         <FullScreenSection 
