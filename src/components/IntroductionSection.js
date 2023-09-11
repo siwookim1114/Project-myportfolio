@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, HStack, VStack, Heading, Text, Button} from "@chakra-ui/react";
+import { Box, HStack, VStack, Heading, Text, Button, Link} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
+import { LinkIcon } from "@chakra-ui/icons";
 
 const IntroductionSection = () => {
     const box_style = {
@@ -10,34 +11,36 @@ const IntroductionSection = () => {
         overflow : "hidden",
         bg : "white",
         display : "flex",
-        width : "50",
     }
 
     const education_links = [
         {
             id: "elementary-middle",
-            url: "www.naver.com"
+            url: "https://www.sis-shekou.org/"
         },
 
         {
             id: "high-school",
-            url:""
+            url:"https://shenzhen.qsi.org/"
         },
         {
             id: "uni",
-            url: ""
+            url: "https://www.hku.hk/"
         }
     ]
-    const handleClick = (props) => () => {
-        
-        
-    }
+    const handleClick = (id) => () => {
+        const link = education_links.find((link) => link.id === id)
+        if (link && link.url)
+        {
+            window.location.href = link.url
+        }
+    };
     return(
         <FullScreenSection 
         alignItems="flex-start"
-        spacing={20}
+        spacing={10}
         p={8}
-        backgroundColor="yellow"
+        backgroundColor="pink"
         >
             <VStack
             alignItems = "center"
@@ -49,20 +52,40 @@ const IntroductionSection = () => {
             </VStack>
             
             <HStack spacing={40}>
-            <Box style={box_style} p={100}>
-                <VStack>
-                    <Text fontSize="xl" fontWeight="bold">Education</Text>
+            <Box style={box_style} p={50} boxShadow="dark-lg" backgroundColor = "white">
+                <VStack spacing = {5}>
+                    <Text fontSize="3xl" fontWeight="bold">Education</Text>
                     <Button 
                     onClick={handleClick("elementary-middle")}
                     variant = "solid" 
-                    colorScheme="red">Elementary School</Button> 
+                    colorScheme="whatsapp"
+                    size = "md"
+                    width = "100%"
+                    rightIcon={<LinkIcon />}
+                    >Elementary School</Button> 
+                    <Button
+                    onClick={handleClick("high")}
+                    variant = "solid"
+                    colorScheme="whatsapp"
+                    size = "md"
+                    width = "100%"
+                    rightIcon={<LinkIcon />}
+                    >High School</Button>
+                    <Button
+                    onClick={handleClick("uni")}
+                    variant = "solid"
+                    colorScheme="whatsapp"
+                    size = "md"
+                    width = "100%"
+                    rightIcon={<LinkIcon />}
+                    >University</Button>
                 </VStack>
             </Box>
-            <Box style={box_style} p={100}
+            <Box style={box_style} p={100} boxShadow="dark-lg" backgroundColor="white"
             >
                 <Text fontSize="xl" fontWeight="bold">Interests</Text>
             </Box>
-            <Box style={box_style} p={100}
+            <Box style={box_style} p={100} boxShadow="dark-lg" backgroundColor="white"
             >
                 <Text fontSize="xl" fontWeight="bold">Hobbies</Text>
             </Box>
