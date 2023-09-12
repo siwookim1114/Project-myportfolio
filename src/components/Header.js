@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -16,7 +15,7 @@ const socials = [
   {
     icon: faGithub,
     id: "git",
-    url: "https://github.com/siwookim1114/my_repo",
+    url: "https://github.com/siwookim1114?tab=repositories"
   },
   {
     icon: faLinkedin,

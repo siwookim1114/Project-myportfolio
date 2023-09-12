@@ -1,9 +1,12 @@
 import React from "react";
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Box, Image, Text, VStack, Button } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-const Card = ({ title, description, status, imageSrc }) => {
+
+const Card = ({key, title, status, description, imageSrc, link}) => {
+  const handleClick = () => {
+    window.location.href = link
+  }
   return (
     <Box borderWidth="1px" borderRadius="xl" overflow="hidden" p={8} bg="white" display="flex" flexDirection="column" width="50">
       <VStack spacing={4} alignItems="start">
@@ -11,7 +14,15 @@ const Card = ({ title, description, status, imageSrc }) => {
         <Text fontSize="lg" color='black' fontWeight = "bold">{title}</Text>
         <Text fontSize="small" color='red' fontWeight = "bold">{status}</Text>
         <Text fontSize="md" color='black'>{description}</Text>
-        <Text fontSize='xs' color='black' fontWeight="bold">See more <span> <FontAwesomeIcon icon={faArrowRight} size="1x" /></span></Text>
+        <Button 
+        variant="solid" 
+        colorScheme="facebook" 
+        onClick={handleClick} 
+        rightIcon={<ArrowForwardIcon />}
+        size = "lg"
+        height = "70px"
+        width = "100%"
+        >See more</Button>
       </VStack>
     </Box>
   );
