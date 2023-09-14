@@ -27,7 +27,7 @@ const IntroductionSection = () => {
         nationality: "My Nationality",
         address: "My Address",
         hobby: "My Hobby",
-        favourite_food: "My Favourite Food"
+        favourite_food: "My Favourite Food",
     })
 
     const box_style = {
@@ -89,14 +89,18 @@ const IntroductionSection = () => {
             spacing = {20}
             >
             <Heading as="h1" id="background-section">
-                Personal Background and Education
+                Education & Personal Background
             </Heading>
             </VStack>
             
             <HStack spacing={40}>
             <Box style={box_style} p={50} boxShadow="dark-lg" backgroundColor = "white">
                 <VStack spacing = {5}>
-                    <Text fontSize="3xl" fontWeight="bold">Education</Text>
+                    <Text 
+                    fontSize="3xl" 
+                    fontWeight="bold"
+                    color="chocolate"
+                    >Education</Text>
                     <Button 
                     onClick={link_handleClick("elementary-middle")}
                     colorScheme="whatsapp"
@@ -121,7 +125,10 @@ const IntroductionSection = () => {
             </Box>
             <Box style={box_style} p={50} boxShadow="dark-lg" backgroundColor="white">
                 <VStack spacing = {5}>
-                    <Text fontSize="3xl" fontWeight="bold">Profile</Text>
+                    <Text 
+                    fontSize="3xl" 
+                    fontWeight="bold"
+                    color="indigo">Profile</Text>
                     <Button
                     onClick={() => dispatch({type: "age"})}
                     style = {profile_button_style}
