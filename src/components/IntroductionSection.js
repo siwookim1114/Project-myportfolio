@@ -92,7 +92,6 @@ const IntroductionSection = () => {
                 Education & Personal Background
             </Heading>
             </VStack>
-            
             <HStack spacing={40}>
             <Box style={box_style} p={50} boxShadow="dark-lg" backgroundColor = "white">
                 <VStack spacing = {5}>
@@ -107,14 +106,12 @@ const IntroductionSection = () => {
                     rightIcon={<ExternalLinkIcon />}
                     style = {link_button_style}
                     >Elementary School</Button> 
-
                     <Button
                     onClick={link_handleClick("high-school")}
                     colorScheme="whatsapp"
                     rightIcon={<ExternalLinkIcon />}
                     style={link_button_style}
                     >High School</Button>
-
                     <Button
                     onClick={link_handleClick("uni")}
                     colorScheme="whatsapp"

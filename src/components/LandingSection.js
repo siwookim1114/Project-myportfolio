@@ -12,6 +12,7 @@ const LandingSection = () => (
     isDarkBackground
     backgroundColor="#2A4365"
   >
+    <particles /> 
     <VStack spacing={4} alignItems="center">
       <Avatar size="xl" name="siwoo" src="link to my personal image" />
       <Heading as="h2" size="3xl" color="white">

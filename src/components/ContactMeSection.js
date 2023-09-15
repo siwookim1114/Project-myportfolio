@@ -25,7 +25,7 @@ const LandingSection = () => {
     initialValues: {
       firstName: "",
       email: "",
-      type: "hireMe",
+      type: "personal",
       comment: ""
     },
     onSubmit: async (values) => {
@@ -79,10 +79,11 @@ const LandingSection = () => {
               <FormControl isInvalid={isInvalid("type")}>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
+                  <option value="personal">Personal</option>
+                  <option value="information">
+                    Further Information
                   </option>
+                  <option value="clarification">Clarification</option>
                   <option value="other">Other</option>
                 </Select>
                 <FormErrorMessage>{isInvalid("type") ? formik.errors.type : null}</FormErrorMessage>

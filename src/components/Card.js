@@ -2,10 +2,16 @@ import React from "react";
 import { Box, Image, Text, VStack, Button } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-
 const Card = ({key, title, status, description, imageSrc, link}) => {
   const handleClick = () => {
-    window.location.href = link
+    if(link === "")
+    {
+      alert("The projects are being prepared to be developed! Stay in touch for updates!");
+    }
+    else
+    {
+      window.location.href = link
+    }
   }
   return (
     <Box borderWidth="1px" borderRadius="xl" overflow="hidden" p={8} bg="white" display="flex" flexDirection="column" width="50">

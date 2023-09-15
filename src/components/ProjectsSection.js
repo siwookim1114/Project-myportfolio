@@ -2,7 +2,6 @@ import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Box, Heading, Button } from "@chakra-ui/react";
 import Card from "./Card";
-import { get } from "lodash";
 
 const projects = [
   {
@@ -76,6 +75,7 @@ const ProjectsSection = () => {
             status={project.status}
             imageSrc={project.getImageSrc()}
             link = {project.link}
+            
           />
         ))}
       </Box>

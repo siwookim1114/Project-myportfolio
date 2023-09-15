@@ -55,7 +55,6 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-
           <nav>
             {socials.map((value) => (
               <a key={value.id} href={value.url} style={{marginRight: '30px'}}>
@@ -65,6 +64,9 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
+              <a href="#background-section" onClick={handleClick("background")}>
+                Education & Background
+              </a>
               <a href="#projects-section" onClick={handleClick("projects")}>
                 Projects
               </a>

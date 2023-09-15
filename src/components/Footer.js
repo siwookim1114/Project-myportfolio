@@ -14,7 +14,7 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p> Si Woo• © 2023</p>
+          <p> Copyright @ Si Woo• © 2023</p>
         </Flex>
       </footer>
     </Box>
