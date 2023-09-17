@@ -105,7 +105,7 @@ const IntroductionSection = () => {
                     colorScheme="whatsapp"
                     rightIcon={<ExternalLinkIcon />}
                     style = {link_button_style}
-                    >Elementary School</Button> 
+                    >Elementary & Middle School</Button> 
                     <Button
                     onClick={link_handleClick("high-school")}
                     colorScheme="whatsapp"

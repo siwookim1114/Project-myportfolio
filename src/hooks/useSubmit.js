@@ -4,7 +4,7 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
  * This is a custom hook that can be used to submit a form and simulate an API call
- * It uses Math.random() to simulate a random success or failure, with 50% chance of each
+ * It uses Math.random() to simulate a random success or failure
  */
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ const useSubmit = () => {
     try {
       await wait(2000);
       console.log("value: ", random)
-      if (random < 0.1) {
+      if (random < 0.9) {
         throw new Error("Something went wrong");
       }
       setResponse({
